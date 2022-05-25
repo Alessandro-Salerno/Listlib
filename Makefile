@@ -8,7 +8,8 @@ $(OBJS): $(SRC)
 	@ mkdir -p $(@D)
 	$(CC) $(CFLAGS) -c $^ -o $@
 
-all: $(OBJS) link
+
+listlib: $(OBJS) link
 
 link:
 	@ mkdir -p bin
