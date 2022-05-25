@@ -5,12 +5,14 @@ OBJS = tmp/listlib.o
 BIN = bin/listlib.a
 
 $(OBJS): $(SRC)
-	@ mkdir -p $(@D)
 	$(CC) $(CFLAGS) -c $^ -o $@
 
 
 listlib: $(OBJS) link
 
 link:
-	@ mkdir -p bin
 	ar rcs $(BIN) $(OBJS)
+
+setup:
+	@ mkdir bin
+	@ mkdir tmp
