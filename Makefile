@@ -1,5 +1,5 @@
 CC = gcc
-CFLAGS = -Wextra -Wall -O3
+CFLAGS = -Wextra -Wall
 SRC = src/listlib.c
 OBJS = tmp/listlib.o
 BIN = bin/listlib.a
