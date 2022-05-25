@@ -1,6 +1,8 @@
 #ifndef LISTLIB_H
 #define LISTLIB_H
 
+    #include <stddef.h>
+
     #define LIST(type, size)                __ListNew__(size, sizeof(type))
     #define LIST_PUSH(list, item)           __ListPushItem__(&list, item)
     #define LIST_GET(list, index, type)     *(type*)(__ListGetItem__(&list, index))
