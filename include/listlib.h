@@ -11,7 +11,13 @@
     #define LIST_DELETE(list)               __ListDelete__(&list)
 
     
-    typedef struct List list_t;
+    typedef struct List {
+              void   *buffer;      // List buffer
+              size_t  buffsize;    // Buffer size in bytes
+              size_t  idx;         // List index
+        const size_t  typesize;    // Size of the vector type
+        const size_t  origsize;    // Original size of the list (In bytes)
+    } list_t;
 
 
     list_t __ListNew__(size_t size, size_t typesize);
